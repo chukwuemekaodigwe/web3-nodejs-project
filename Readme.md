@@ -2,7 +2,7 @@
 
 ### Overview
 
-This project implements a backend system with a focus on the Model-View-Controller (MVC) architecture. The system provides two additional APIs to enhance user functionality. These APIs are:
+This project implements a backend system with a focus on the Model-View-Controller (MVC) architecture. It is an interview assessment in which I'm required to develop two additional routes that will enable clients to access their crypto token balance: one for Ethereum tokens/coins and the other for every other token type. The system provides two additional APIs to enhance user functionality. These APIs are:
 
 1. **Route**: `/api/accountbal/eth`
    - **Description**: Provides the authenticated user with their Ethereum wallet balance.
@@ -20,9 +20,9 @@ This project implements a backend system with a focus on the Model-View-Controll
 
 ### Implementation Details
 
-- **Middleware Usage**: The system employs the `ensureWebToken` middleware to restrict unauthorized access to the routes.
+- **Middleware Usage**: The system employs the `ensureWebToken` middleware to restrict unauthorized route access.
 
-- **Error Handling**: If a user attempts to access the system without proper authentication, they will be denied access. Additionally, if a user requests information on a cryptocurrency that is not registered in the system, a "record not found" response is provided.
+- **Error Handling**: If a user attempts to access the system without proper authentication, they will be denied access. Additionally, if a user requests information on a cryptocurrency not registered in the system, a "record not found" response is provided.
 
 ### Usage
 
@@ -35,18 +35,18 @@ npm install
 ```
 
 #### Database and Tables setup
-You have the proper database and tables setup; 
+You have the proper database and tables set; 
 
-#### Setup environemnt variable appropriately
-then configure the config.js files on the root of this project
-
+#### Setup environment 
+-- Setup variable appropriately by providing the environment variable on the .env file and additional config.js file
+-- then configure the config.js files on the root of this project
 
 #### Running the Server
 
 Start the server using:
 
 ```bash
-node index.js
+npm run start
 ```
 
 ### Code Testing
@@ -61,5 +61,6 @@ To execute the test, run
 ```
 npm run test
 ```
+The test cases are accessed from the tests directory I created  ``` /tests ```
 
-The test cases are accessed from the tests directory I created  ``` /tests/account.test.js ```
+**Author: Odigwe Malachy Chukwuemeka
